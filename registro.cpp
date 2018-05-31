@@ -4,12 +4,12 @@
 #include <string>
 using namespace std;
 
-void menu(){ // função pra ficar mostrando o menu
+void menu(){ // funÃ§Ã£o pra ficar mostrando o menu
 	cout << "************** Cadastro de aluno ENE **************" << endl;
-	cout << "1 - Inclusão aluno\n";
-	cout << "2 - Exclusão aluno\n";
+	cout << "1 - InclusÃ£o aluno\n";
+	cout << "2 - ExclusÃ£o aluno\n";
 	cout << "3 - Pesquisa aluno\n";
-	cout << "4 - Alteração aluno\n";
+	cout << "4 - AlteraÃ§Ã£o aluno\n";
 	cout << "5 - Listagem alunos\n";
 	cout << "6 - FIM\n";
 }
@@ -20,29 +20,31 @@ struct disciplina{
 };
 struct cadastro{ // struct principal "cadastro"
 	string nome; // membro "nome"
-	string mat; // membro "matrícula"
+	string mat; // membro "matrÃ­cula"
 	string address; // membro FDP "address"
 	int tel; // membro "telefone"
 	disciplina subscribe; // membro "subscribe"
 };
 
 int main(){
-	// declaração de variáveis
+	// declaraÃ§Ã£o de variÃ¡veis
 	int choice;
-	cadastro aluno; // variável "aluno" da struct "cadastro"
+	cadastro aluno; // variÃ¡vel "aluno" da struct "cadastro"
 	
 	setlocale(LC_ALL, "Portuguese");
 	
 	cout << "Nome: ";
 	getline(cin, aluno.nome);
-	cout << "Matrícula: ";
+	cout << "MatrÃ­cula: ";
 	cin >> aluno.mat;
-	cout << "Endereço: ";
+	cin.ignore(); // limpa buffer
+	cout << "EndereÃ§o: ";
 	getline(cin, aluno.address);
 	cout << "Telefone: ";
 	cin >> aluno.tel;
-	cout << "Código da disciplina: ";
+	cout << "CÃ³digo da disciplina: ";
 	cin >> aluno.subscribe.cod;
+	cin.ignore(); // limpa buffer
 	cout << "Nome da disciplina: ";
 	getline(cin, aluno.subscribe.nomedisc);
 	
