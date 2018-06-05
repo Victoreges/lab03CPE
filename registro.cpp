@@ -53,7 +53,7 @@ int main(){
 	cout << "Nome da disciplina: ";
 	getline(cin, aluno.subscribe.nomedisc);
 	
-	choice.showsth();
+	aluno.showsth();
 	
 	
 	return 0;
