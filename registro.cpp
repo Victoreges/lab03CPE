@@ -24,6 +24,24 @@ struct cadastro{ // struct principal "cadastro"
 	string address; // membro FDP "address"
 	int tel; // membro "telefone"
 	disciplina subscribe; // membro "subscribe"
+	
+	void incluir(){ // função-membro para inclusão dos dados
+		cout << "Nome: ";
+		getline(cin, nome);
+		cout << "Matrícula: ";
+		cin >> mat;
+		cin.ignore(); // limpa buffer
+		cout << "Endereço: ";
+		getline(cin, address);
+		cout << "Telefone: ";
+		cin >> tel;
+		cout << "Código da disciplina: ";
+		cin >> subscribe.cod;
+		cin.ignore(); // limpa buffer
+		cout << "Nome da disciplina: ";
+		getline(cin, subscribe.nomedisc);
+	}
+	
 };
 
 int main(){
@@ -32,21 +50,7 @@ int main(){
 	cadastro aluno; // variável "aluno" da struct "cadastro"
 	
 	setlocale(LC_ALL, "Portuguese");
-	
-	cout << "Nome: ";
-	getline(cin, aluno.nome);
-	cout << "Matrícula: ";
-	cin >> aluno.mat;
-	cin.ignore(); // limpa buffer
-	cout << "Endereço: ";
-	getline(cin, aluno.address);
-	cout << "Telefone: ";
-	cin >> aluno.tel;
-	cout << "Código da disciplina: ";
-	cin >> aluno.subscribe.cod;
-	cin.ignore(); // limpa buffer
-	cout << "Nome da disciplina: ";
-	getline(cin, aluno.subscribe.nomedisc);
+	aluno.incluir();
 	
 	return 0;
 }
