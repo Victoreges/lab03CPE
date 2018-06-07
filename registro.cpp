@@ -4,7 +4,7 @@
 #include <string>
 using namespace std;
 
-void menu(){ // função pra ficar mostrando o menu
+void menu(){ // função para exibição do menu
 	cout << "************** Cadastro de aluno ENE **************" << endl;
 	cout << "1 - Inclusão aluno\n";
 	cout << "2 - Exclusão aluno\n";
@@ -14,7 +14,7 @@ void menu(){ // função pra ficar mostrando o menu
 	cout << "6 - FIM\n";
 }
 
-struct disciplina{
+struct disciplina{ // struct aninhada à struct principal
 	int cod;
 	string nomedisc;
 };
@@ -41,6 +41,39 @@ struct cadastro{ // struct principal "cadastro"
 		cout << "Nome da disciplina: ";
 		getline(cin, subscribe.nomedisc);
 	}
+	void excluir(){ // função-membro para exclução dos dados
+		/* 
+			A busca será feita por nome ou matrícula.
+			Após a exclusão deve ser mostrada a mensagem: "Aluno excluído"
+			Caso não exista o aluno procurado deve ser mostrada a mensagem: "Aluno
+			não cadastrado"
+		*/
+		
+	}
+	void pesquisar();{ // função-membro para pesquisa de dados de algum aluno
+		/*
+			A pesquisa pode ser por nome ou matrícula e deve retornar todos os
+			dados do aluno encontrado.
+			Caso não exista o aluno procurado deve ser mostrada a mensagem: "Aluno
+		    não cadastrado"	
+		*/
+	
+	}
+	void alterar(){ // função-membro para alteração de dados de algum aluno
+		/*
+			Primeiro deve ser procurado o aluno a ser alterado.
+			A pesquisa deve ser por nome ou por matrícula.
+			Deve-se exibir todos os dados do aluno e permitir alteração de
+			qualquer um destes.
+		*/
+	}
+	void listar(){ // função-membro para listagem de dados por ORDEM ALFABÉTICA
+		/*
+			Devem ser listados todos os dados digitados em ordem alfabética
+			por nome do aluno.
+		*/
+		
+	}
 	
 };
 
@@ -51,6 +84,7 @@ int main(){
 	
 	setlocale(LC_ALL, "Portuguese");
 	aluno.incluir();
+	
 	
 	return 0;
 }
