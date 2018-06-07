@@ -24,11 +24,6 @@ struct cadastro{ // struct principal "cadastro"
 	string address; // membro FDP "address"
 	int tel; // membro "telefone"
 	disciplina subscribe; // membro "subscribe"
-	
-	string showsth(string nome){ // função dentro da struct que mostra o membro "nome"
-		return nome;	
-	}
-	
 };
 
 int main(){
@@ -52,9 +47,6 @@ int main(){
 	cin.ignore(); // limpa buffer
 	cout << "Nome da disciplina: ";
 	getline(cin, aluno.subscribe.nomedisc);
-	
-	aluno.showsth();
-	
 	
 	return 0;
 }
